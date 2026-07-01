@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body{
+  margin:0;
+  padding:0;
+  background:#0F172A;
+  color:white;
+  font-family: Inter, sans-serif;
+}
+
+/* Hide scrollbar globally for a cleaner premium UI, while keeping scroll functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

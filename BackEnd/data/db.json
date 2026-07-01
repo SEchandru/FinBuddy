@@ -1,0 +1,533 @@
+{
+  "users": [
+    {
+      "id": "4p7ixloxxmqqqbdkj",
+      "createdAt": "2026-06-23T14:17:52.243Z",
+      "name": "Chandrabal C",
+      "email": "chandrabal2104@gmail.com",
+      "password": "$2a$10$zvYxlfAeV5uxK4k00N4U2efL49PtpX/Gme3Ise69gQpTPzp2vTHVa",
+      "isOnboarded": true,
+      "age": 23,
+      "monthlyIncome": 13500,
+      "monthlySavingsGoal": 2000,
+      "netWorth": 318.35,
+      "financialHealthScore": 90,
+      "riskProfile": null,
+      "updatedAt": "2026-06-24T16:43:04.227Z"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "2d16yhkadmqs4ordx",
+      "createdAt": "2026-06-24T13:47:57.477Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 25,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "exnxb27jdmqs4ordy",
+      "createdAt": "2026-06-24T13:47:57.478Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 35,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "jq9tm9vi1mqs4ordz",
+      "createdAt": "2026-06-24T13:47:57.479Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 10,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-22"
+    },
+    {
+      "id": "0kro4uwcomqs4ore1",
+      "createdAt": "2026-06-24T13:47:57.481Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 130,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-21"
+    },
+    {
+      "id": "z4nm2lle9mqs4ore2",
+      "createdAt": "2026-06-24T13:47:57.482Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 170,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-21"
+    },
+    {
+      "id": "jgy5ouljhmqs4ore4",
+      "createdAt": "2026-06-24T13:47:57.484Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 60,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-20"
+    },
+    {
+      "id": "78d0mmnncmqs4ore5",
+      "createdAt": "2026-06-24T13:47:57.485Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 130,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-20"
+    },
+    {
+      "id": "7httbpe6xmqs4ore6",
+      "createdAt": "2026-06-24T13:47:57.486Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 15,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "s6h3g4germqs4ore9",
+      "createdAt": "2026-06-24T13:47:57.489Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 50,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "gjzmvr4e9mqs4oreb",
+      "createdAt": "2026-06-24T13:47:57.491Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 60,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "h5cb50rttmqs4orec",
+      "createdAt": "2026-06-24T13:47:57.492Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 36,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "mw6duyaj2mqs4ored",
+      "createdAt": "2026-06-24T13:47:57.493Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 30,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-16"
+    },
+    {
+      "id": "pk2p6p5k4mqs4oref",
+      "createdAt": "2026-06-24T13:47:57.495Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 119,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-15"
+    },
+    {
+      "id": "l6vttwohqmqs4oreg",
+      "createdAt": "2026-06-24T13:47:57.496Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 100,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-14"
+    },
+    {
+      "id": "xhtfqkqnxmqs4orei",
+      "createdAt": "2026-06-24T13:47:57.498Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 150,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-14"
+    },
+    {
+      "id": "er15u5ufjmqs4orek",
+      "createdAt": "2026-06-24T13:47:57.500Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 70,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-14"
+    },
+    {
+      "id": "t8af0nrzqmqs4orem",
+      "createdAt": "2026-06-24T13:47:57.502Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 82,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-13"
+    },
+    {
+      "id": "veatab0zqmqs4oreo",
+      "createdAt": "2026-06-24T13:47:57.504Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 75,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-13"
+    },
+    {
+      "id": "98flzoho1mqs4orep",
+      "createdAt": "2026-06-24T13:47:57.505Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 120,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-13"
+    },
+    {
+      "id": "l5tms9n17mqs4orer",
+      "createdAt": "2026-06-24T13:47:57.507Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 30,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "mqzu8oqz2mqs4oret",
+      "createdAt": "2026-06-24T13:47:57.509Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 130,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "q6o2mwht9mqs4orev",
+      "createdAt": "2026-06-24T13:47:57.511Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 50,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "oqpapf2dwmqs4orex",
+      "createdAt": "2026-06-24T13:47:57.513Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 15,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "stmf3bnt9mqs4orey",
+      "createdAt": "2026-06-24T13:47:57.514Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 30,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "ssfx4u3j4mqs4orf0",
+      "createdAt": "2026-06-24T13:47:57.516Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 104,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "qg0kqhpwwmqs4orf1",
+      "createdAt": "2026-06-24T13:47:57.517Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 6734,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-09"
+    },
+    {
+      "id": "tvz0wpeh8mqs4orf2",
+      "createdAt": "2026-06-24T13:47:57.518Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 120,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-09"
+    },
+    {
+      "id": "wgkf8m1exmqs4orf4",
+      "createdAt": "2026-06-24T13:47:57.520Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 27,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-09"
+    },
+    {
+      "id": "aforg473bmqs4orf5",
+      "createdAt": "2026-06-24T13:47:57.521Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 120,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-08"
+    },
+    {
+      "id": "aztrrob1wmqs4orf7",
+      "createdAt": "2026-06-24T13:47:57.523Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 17,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-07"
+    },
+    {
+      "id": "t9scbe7lwmqs4orf9",
+      "createdAt": "2026-06-24T13:47:57.525Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 5,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-07"
+    },
+    {
+      "id": "wudglpgaomqs4orfa",
+      "createdAt": "2026-06-24T13:47:57.526Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 80,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-07"
+    },
+    {
+      "id": "wcjlf75tmmqs4orfc",
+      "createdAt": "2026-06-24T13:47:57.528Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 50,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-07"
+    },
+    {
+      "id": "4laa8mi7kmqs4orfe",
+      "createdAt": "2026-06-24T13:47:57.530Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 100,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "9nq66mg2lmqs4orff",
+      "createdAt": "2026-06-24T13:47:57.531Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 20,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "nawym932amqs4orfh",
+      "createdAt": "2026-06-24T13:47:57.533Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 20,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "5mxzem9ghmqs4orfi",
+      "createdAt": "2026-06-24T13:47:57.534Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 89,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "0jyzaygk3mqs4orfj",
+      "createdAt": "2026-06-24T13:47:57.535Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 155,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "s3n4j4342mqs4orfk",
+      "createdAt": "2026-06-24T13:47:57.536Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 384,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "wkgi1kioqmqs4orfm",
+      "createdAt": "2026-06-24T13:47:57.538Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 50,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-05"
+    },
+    {
+      "id": "vam505d5umqs4orfo",
+      "createdAt": "2026-06-24T13:47:57.540Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 10,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-05"
+    },
+    {
+      "id": "isf8w7nfbmqs4orfp",
+      "createdAt": "2026-06-24T13:47:57.541Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 76,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-04"
+    },
+    {
+      "id": "3nyq5atcpmqs4orfr",
+      "createdAt": "2026-06-24T13:47:57.543Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 12,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-04"
+    },
+    {
+      "id": "wcxen7zbmmqs4orfu",
+      "createdAt": "2026-06-24T13:47:57.546Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 50,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "cagwuihbemqs4orfv",
+      "createdAt": "2026-06-24T13:47:57.547Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 722,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "y5zkczx13mqs4orfw",
+      "createdAt": "2026-06-24T13:47:57.548Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 50,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "o2ovvmqurmqs4orfy",
+      "createdAt": "2026-06-24T13:47:57.550Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 15,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "8jg3helw3mqs4orfz",
+      "createdAt": "2026-06-24T13:47:57.551Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 139,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "ujz9qe79wmqs4org1",
+      "createdAt": "2026-06-24T13:47:57.553Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 15,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-01"
+    },
+    {
+      "id": "hf4h0bfxrmqs4org3",
+      "createdAt": "2026-06-24T13:47:57.555Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "amount": 10,
+      "category": "Other",
+      "description": "",
+      "date": "2026-06-01"
+    }
+  ],
+  "goals": [
+    {
+      "id": "6ksfg2f26mqsaqkyj",
+      "createdAt": "2026-06-24T16:37:20.155Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "name": "First Bike Purchase",
+      "targetAmount": 150000,
+      "currentAmount": 0,
+      "category": "Bike",
+      "deadline": "2027-01-01",
+      "priority": "Important"
+    }
+  ],
+  "quizHistory": [],
+  "portfolio": [
+    {
+      "id": "n30d6pal7mqqqbdkl",
+      "createdAt": "2026-06-23T14:17:52.245Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "assetType": "Stocks",
+      "amount": 318.35,
+      "updatedAt": "2026-06-24T16:43:04.215Z"
+    },
+    {
+      "id": "z37id5kkgmqqqbdkn",
+      "createdAt": "2026-06-23T14:17:52.247Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "assetType": "Bonds",
+      "amount": 0,
+      "updatedAt": "2026-06-24T16:43:04.217Z"
+    },
+    {
+      "id": "gkfc8szlemqqqbdko",
+      "createdAt": "2026-06-23T14:17:52.248Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "assetType": "Gold",
+      "amount": 0,
+      "updatedAt": "2026-06-24T16:43:04.219Z"
+    },
+    {
+      "id": "qh458e04imqqqbdkp",
+      "createdAt": "2026-06-23T14:17:52.249Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "assetType": "Cash",
+      "amount": 0,
+      "updatedAt": "2026-06-24T16:43:04.222Z"
+    }
+  ],
+  "holdings": [
+    {
+      "id": "53jq3ic5wmqsaxyfo",
+      "createdAt": "2026-06-24T16:43:04.212Z",
+      "userId": "4p7ixloxxmqqqbdkj",
+      "name": "MANAPPURAM",
+      "type": "Equity",
+      "qty": 5,
+      "value": 318.35,
+      "investedValue": 161.88,
+      "sector": "FINANCE",
+      "risk": "Medium"
+    }
+  ]
+}
