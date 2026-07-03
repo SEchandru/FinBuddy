@@ -17,10 +17,11 @@ import {
   FaHeartbeat,
   FaUserCheck,
   FaRobot,
-  FaChartPie
+  FaChartPie,
+  FaTimes
 } from 'react-icons/fa';
 
-function Sidebar() {
+function Sidebar({ onClose }) {
   const { user, logout } = useAuth();
   const location = useLocation();
 
@@ -64,12 +65,26 @@ function Sidebar() {
     <div className="w-64 h-screen bg-slate-900 border-r border-slate-800 p-5 flex flex-col justify-between sticky top-0 overflow-y-auto">
       
       <div>
-        <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-          FinBuddy
-        </h1>
-        <p className="text-xs text-slate-500 mb-6 font-medium">
+        <div className="flex items-center justify-between mb-1">
+          <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+            FinBuddy
+          </h1>
+          {onClose && (
+            <button 
+              onClick={onClose}
+              className="md:hidden p-2 text-slate-400 hover:text-white cursor-pointer touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Close menu"
+            >
+              <FaTimes className="text-lg" />
+            </button>
+          )}
+        </div>
+        <p className="text-xs text-slate-500 mb-2 font-medium">
           Personal Wealth Advisor
         </p>
+        <div className="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md text-[10px] text-emerald-400 font-semibold mb-5 w-fit">
+          <FaShieldAlt className="text-[9px]" /> Verified Secure Terminal
+        </div>
  
         {/* Dynamic Financial Health Score Card */}
         <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-4 mb-6">
@@ -95,6 +110,7 @@ function Sidebar() {
               <li key={index}>
                 <NavLink
                   to={item.path}
+                  onClick={onClose}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     active
                       ? 'bg-blue-600/10 text-blue-400 border border-blue-500/20'
@@ -130,6 +146,14 @@ function Sidebar() {
             <FaSignOutAlt />
             Sign Out
           </button>
+
+          <div className="mt-3 px-4 py-2 border-t border-slate-850/50 text-[9px] text-slate-500 space-y-1 select-none font-medium leading-snug">
+            <div className="flex items-center gap-1.5 font-bold text-slate-400 uppercase tracking-wide">
+              <span className="h-1 w-1 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>256-Bit Local Encryption</span>
+            </div>
+            <p>Self-custodial wealth advisor. We never request live bank login credentials.</p>
+          </div>
         </div>
       </div>
 

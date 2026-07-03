@@ -433,12 +433,24 @@ function Roadmap() {
       cashPct += 5;
     }
 
-    const netWorth = currentSavings + currentInvestments;
+    // Load saved savings percentage if any, else default to 20%
+    let savingsPct = 20;
+    const savedEnvelopes = localStorage.getItem('finbuddy_envelopes');
+    if (savedEnvelopes) {
+      try {
+        const parsed = JSON.parse(savedEnvelopes);
+        savingsPct = parsed.savings || 20;
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    const savingsAmt = (savingsPct / 100) * monthlyIncome;
+
     const allocationData = [
-      { name: 'Equity Mutual Funds', value: equityPct, rupee: Math.round((equityPct/100)*netWorth) },
-      { name: 'Debt Funds/Bonds', value: debtPct, rupee: Math.round((debtPct/100)*netWorth) },
-      { name: 'Gold / Hedging', value: goldPct, rupee: Math.round((goldPct/100)*netWorth) },
-      { name: 'Emergency Cash / FDs', value: cashPct, rupee: Math.round((cashPct/100)*netWorth) }
+      { name: 'Equity Mutual Funds', value: equityPct, rupee: Math.round((equityPct/100)*savingsAmt) },
+      { name: 'Debt Funds/Bonds', value: debtPct, rupee: Math.round((debtPct/100)*savingsAmt) },
+      { name: 'Gold / Hedging', value: goldPct, rupee: Math.round((goldPct/100)*savingsAmt) },
+      { name: 'Emergency Cash / FDs', value: cashPct, rupee: Math.round((cashPct/100)*savingsAmt) }
     ].filter(a => a.value > 0);
 
     // Custom allocation reasoning

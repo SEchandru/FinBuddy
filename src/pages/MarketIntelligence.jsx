@@ -951,35 +951,56 @@ function MarketIntelligence() {
                 </div>
               ) : (
                 <div className="flex-1 overflow-y-auto pr-1">
-                  <table className="w-full text-left border-collapse">
-                    <thead>
-                      <tr className="border-b border-slate-800 text-[10px] uppercase tracking-wider text-slate-400 font-bold">
-                        <th className="pb-3">Currency</th>
-                        <th className="pb-3 text-right">In INR (Rupees)</th>
-                        <th className="pb-3 text-right">1 INR Equals</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-800/40 text-xs">
-                      {filteredForexGrid.map(item => (
-                        <tr key={item.code} className="hover:bg-slate-800/20 transition-all">
-                          <td className="py-3.5 pr-2">
-                            <div className="flex items-center gap-2">
-                              <span className="font-extrabold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded text-[10px] font-mono">
-                                {item.code}
-                              </span>
-                              <span className="text-slate-300 font-medium">{item.name}</span>
-                            </div>
-                          </td>
-                          <td className="py-3.5 text-right font-mono text-slate-200 font-bold">
-                            ₹{item.rateInInr.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 3 })}
-                          </td>
-                          <td className="py-3.5 text-right font-mono text-slate-500">
-                            {forexRates[item.code]?.toFixed(5)} {item.code}
-                          </td>
+                  {/* Desktop View */}
+                  <div className="hidden md:block">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="border-b border-slate-800 text-[10px] uppercase tracking-wider text-slate-400 font-bold">
+                          <th className="pb-3">Currency</th>
+                          <th className="pb-3 text-right">In INR (Rupees)</th>
+                          <th className="pb-3 text-right">1 INR Equals</th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody className="divide-y divide-slate-800/40 text-xs">
+                        {filteredForexGrid.map(item => (
+                          <tr key={item.code} className="hover:bg-slate-800/20 transition-all">
+                            <td className="py-3.5 pr-2">
+                              <div className="flex items-center gap-2">
+                                <span className="font-extrabold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded text-[10px] font-mono">
+                                  {item.code}
+                                </span>
+                                <span className="text-slate-300 font-medium">{item.name}</span>
+                              </div>
+                            </td>
+                            <td className="py-3.5 text-right font-mono text-slate-200 font-bold">
+                              ₹{item.rateInInr.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 3 })}
+                            </td>
+                            <td className="py-3.5 text-right font-mono text-slate-500">
+                              {forexRates[item.code]?.toFixed(5)} {item.code}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Mobile View */}
+                  <div className="block md:hidden space-y-3">
+                    {filteredForexGrid.map(item => (
+                      <div key={item.code} className="bg-slate-950 border border-slate-850 p-3 rounded-xl flex justify-between items-center text-xs font-semibold leading-normal">
+                        <div className="flex items-center gap-2">
+                          <span className="font-extrabold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded text-[9px] font-mono">
+                            {item.code}
+                          </span>
+                          <span className="text-slate-300 font-medium">{item.name}</span>
+                        </div>
+                        <div className="text-right">
+                          <strong className="text-slate-200 block">₹{item.rateInInr.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 3 })}</strong>
+                          <span className="text-[9px] text-slate-500 font-mono">{forexRates[item.code]?.toFixed(5)} {item.code}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

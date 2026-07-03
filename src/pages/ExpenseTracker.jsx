@@ -2117,7 +2117,8 @@ function ExpenseTracker() {
               )}
 
               {/* Transactions Ledger Table */}
-              <div className="overflow-x-auto">
+              {/* Desktop/Tablet Table View */}
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 text-slate-500 uppercase tracking-wider font-semibold">
@@ -2183,6 +2184,64 @@ function ExpenseTracker() {
                     )}
                   </tbody>
                 </table>
+              </div>
+
+              {/* Mobile Card-Based View */}
+              <div className="block md:hidden space-y-4">
+                {filteredExpenses.map((exp) => (
+                  <div 
+                    key={exp.id} 
+                    className={`bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3 ${
+                      selectedExpenseIds.includes(exp.id) ? 'border-rose-500/30 bg-rose-500/5' : ''
+                    }`}
+                  >
+                    <div className="flex justify-between items-start">
+                      <div className="flex items-center gap-2">
+                        <input 
+                          type="checkbox"
+                          checked={selectedExpenseIds.includes(exp.id)}
+                          onChange={() => handleToggleSelectExpense(exp.id)}
+                          className="rounded border-slate-800 text-blue-500 focus:ring-0 bg-slate-950 h-5 w-5 cursor-pointer touch-manipulation min-w-[30px] min-h-[30px]"
+                        />
+                        <span className="font-bold text-slate-250 text-xs">{exp.description || 'No description'}</span>
+                      </div>
+                      <span className="font-bold text-xs text-rose-400">₹{exp.amount.toLocaleString('en-IN')}</span>
+                    </div>
+
+                    <div className="flex justify-between items-center text-xs border-t border-slate-850 pt-2 text-slate-400">
+                      <div className="space-y-1">
+                        <span className="text-[9px] text-slate-500 uppercase font-bold block">Category</span>
+                        <select
+                          value={exp.category || 'Other'}
+                          onChange={(e) => handleEditExpenseCategory(exp.id, e.target.value)}
+                          className="bg-slate-950 border border-slate-800 text-blue-400 font-bold px-2 py-1 rounded-lg text-[10px] focus:outline-none cursor-pointer"
+                        >
+                          {CATEGORIES.map(c => <option key={c.name} value={c.name}>{c.name}</option>)}
+                        </select>
+                      </div>
+
+                      <div className="text-right space-y-1">
+                        <span className="text-[9px] text-slate-500 uppercase font-bold block">Date</span>
+                        <span className="font-mono text-[10px] text-slate-500">{exp.date}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-end border-t border-slate-850 pt-2">
+                      <button
+                        onClick={() => handleDeleteExpense(exp.id)}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-500/10 text-rose-400 hover:bg-rose-500 hover:text-white rounded-lg text-[10px] font-bold transition-all cursor-pointer min-h-[44px] touch-manipulation"
+                      >
+                        <FaTrash size={10} /> Delete Record
+                      </button>
+                    </div>
+                  </div>
+                ))}
+
+                {filteredExpenses.length === 0 && (
+                  <div className="py-8 text-center text-slate-500 text-xs">
+                    No matching transactions found in database ledger.
+                  </div>
+                )}
               </div>
             </div>
           )}

@@ -285,7 +285,8 @@ function AssetAllocation() {
           Allocation Gap Analysis
         </h3>
         
-        <div className="overflow-x-auto">
+        {/* Desktop View */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-slate-800 text-[10px] uppercase tracking-wider text-slate-400 font-bold">
@@ -322,6 +323,51 @@ function AssetAllocation() {
               })}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card-Based View */}
+        <div className="block md:hidden space-y-4">
+          {gapAnalysis.map((row) => {
+            const isOver = row.gapPct < 0;
+            return (
+              <div key={row.name} className="bg-slate-950 border border-slate-850 rounded-xl p-4 space-y-3 font-semibold text-xs leading-normal">
+                <div className="flex justify-between items-center border-b border-slate-900 pb-2">
+                  <span className="text-slate-200 text-sm font-bold">{row.name}</span>
+                  <span className={`text-[9px] font-bold px-2.5 py-0.5 rounded-full ${
+                    row.action.includes('BUY') ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' : 
+                    (row.action.includes('REDUCE') ? 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20' : 
+                    'bg-slate-800/40 text-slate-400 border border-slate-800/50')
+                  }`}>
+                    {row.action}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-y-2 gap-x-4">
+                  <div>
+                    <span className="text-[9px] text-slate-500 uppercase font-bold block">Current Value</span>
+                    <span className="font-mono text-slate-300">₹{row.currentVal.toLocaleString()}</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] text-slate-500 uppercase font-bold block">Current %</span>
+                    <span className="font-mono text-slate-300">{row.currentPct}%</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] text-slate-500 uppercase font-bold block">Target %</span>
+                    <span className="font-mono text-slate-400">{row.targetPct}%</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] text-slate-500 uppercase font-bold block">Deviation Gap</span>
+                    <span className={`font-mono font-bold ${isOver ? 'text-yellow-500' : 'text-emerald-400'}`}>
+                      {row.gapPct > 0 ? `+${row.gapPct}%` : `${row.gapPct}%`}
+                      <span className="text-[9px] block font-light text-slate-500">
+                        {row.gapVal > 0 ? `Buy ₹${row.gapVal.toLocaleString()}` : `Sell ₹${Math.abs(row.gapVal).toLocaleString()}`}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 

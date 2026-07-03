@@ -635,7 +635,9 @@ function Portfolio() {
                 </p>
               </div>
             ) : (
-              <div className="overflow-x-auto">
+              <>
+                {/* Desktop/Tablet Table View */}
+                <div className="hidden md:block overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 text-slate-400 uppercase tracking-wider font-semibold">
@@ -701,7 +703,73 @@ function Portfolio() {
                   </tbody>
                 </table>
               </div>
-            )}
+
+              {/* Mobile Card-Based View */}
+              <div className="block md:hidden space-y-4">
+                {holdings.map((h) => {
+                  const pl = h.value - h.investedValue;
+                  const plPct = h.investedValue > 0 ? (pl / h.investedValue) * 100 : 0;
+                  return (
+                    <div key={h.id} className="bg-slate-950 border border-slate-850 rounded-xl p-4 space-y-3">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <strong className="text-white text-xs block">{h.name}</strong>
+                          <span className="text-[9px] text-slate-500 font-mono tracking-wider uppercase block">{h.sector}</span>
+                        </div>
+                        <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold ${
+                          h.risk === 'High' || h.risk === 'Very High' ? 'bg-red-500/10 text-red-400' :
+                          h.risk === 'Medium' ? 'bg-yellow-500/10 text-yellow-400' :
+                          'bg-green-500/10 text-green-400'
+                        }`}>
+                          {h.risk} Risk
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-semibold border-t border-slate-900 pt-2.5">
+                        <div>
+                          <span className="text-[9px] text-slate-500 uppercase font-bold block">Qty / Units</span>
+                          <span className="font-mono text-slate-300">{h.qty}</span>
+                        </div>
+                        <div>
+                          <span className="text-[9px] text-slate-500 uppercase font-bold block">Invested</span>
+                          <span className="font-mono text-slate-300">₹{h.investedValue.toLocaleString('en-IN')}</span>
+                        </div>
+                        <div>
+                          <span className="text-[9px] text-slate-500 uppercase font-bold block">Current Value</span>
+                          <span className="font-mono text-slate-200">₹{h.value.toLocaleString('en-IN')}</span>
+                        </div>
+                        <div>
+                          <span className="text-[9px] text-slate-500 uppercase font-bold block">P/L (Gain)</span>
+                          <span className={`font-mono ${pl >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                            {pl >= 0 ? '+' : ''}₹{pl.toLocaleString('en-IN')}<br />
+                            <span className="text-[9px] font-medium">{pl >= 0 ? '▲' : '▼'} {plPct.toFixed(1)}%</span>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex justify-between items-center border-t border-slate-900 pt-2.5">
+                        <span
+                          className="px-2.5 py-0.5 rounded-full text-[9px] font-bold"
+                          style={{
+                            backgroundColor: `${ASSET_COLORS[h.type] || '#475569'}20`,
+                            color: ASSET_COLORS[h.type] || '#94a3b8'
+                          }}
+                        >
+                          {h.type}
+                        </span>
+                        <button
+                          onClick={() => handleDelete(h.id, h.name)}
+                          className="flex items-center gap-1 px-3 py-1.5 bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white rounded-lg text-[10px] font-bold transition-all cursor-pointer min-h-[44px] touch-manipulation"
+                        >
+                          <FaTrash size={10} /> Remove
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
           </div>
 
         </div>

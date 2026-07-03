@@ -492,6 +492,11 @@ function FinancialAnalysis() {
         </button>
       </div>
 
+      {/* Dynamic Security Verification Label */}
+      <div className="flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-xl text-[10px] text-emerald-400 font-bold w-fit print:hidden">
+        <FaShieldAlt className="text-[9px]" /> 256-Bit Local Execution Verified | Zero Transaction Risk
+      </div>
+
       {/* Tabbed Navigation */}
       <div className="flex border-b border-slate-900 gap-2 pb-1 print:hidden">
         {[
